@@ -9,13 +9,14 @@ Game::Game() :
             640, 480,
             0);
     renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_SOFTWARE);
+    factories.push_back(new ClayFactory());
     factories.push_back(new LegoFactory());
     factories.push_back(new MudFactory());
-    factories.push_back(new ClayFactory());
+    
 
     for(BricksFactory*factory:factories)
     {
-        std::vector<Bricks*>newbricks=factory->getBricks(3);
+        std::vector<Bricks*>newbricks=factory->getBricks(10);//makes that amount of bricks
         for (Bricks*bricks:newbricks)
         {
             m_bricks.push_back(bricks);
@@ -73,6 +74,7 @@ void Game::render()
     SDL_RenderPresent(renderer);
 
 
+//draws them all :) 
     for(Bricks*bricks:m_bricks)
     {
         bricks->render();
