@@ -5,7 +5,8 @@
 #include <string>
 #include<vector>
 #include "ClayFactory.h"
-#include "MudFactory.h"
+#include "TimberFactory.h"
+#include"ConcreteFactory.h"
 #include "LegoFactory.h"
 class Game
 {
@@ -22,6 +23,12 @@ private:
     void render();
     SDL_Window *screen;
     SDL_Renderer *renderer;
+    SDL_Surface *screenSurface = SDL_GetWindowSurface(screen);
+    SDL_Surface* screentext;
+    SDL_Rect r[4];
+    int check_click_in_rect(int x, int y,SDL_Rect rect[]);
+    int x;
+    int y;
     void cleanUp();
 
     bool m_gameIsRunning;

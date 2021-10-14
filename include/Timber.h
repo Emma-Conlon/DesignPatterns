@@ -4,10 +4,10 @@
 #include "Brick.h"
 
 //
-class Mud: public Bricks{
+class Timber: public Bricks{
 
 void render()
 {
-    std::cout<<"MudBricks"<<std::endl;
+    std::cout<<"TimberBricks"<<std::endl;
 }
 };
