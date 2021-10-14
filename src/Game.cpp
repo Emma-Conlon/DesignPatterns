@@ -15,14 +15,14 @@ Game::Game() :
     //factories.push_back(new TimberFactory());
     
 
-    for(BricksFactory*factory:factories)
-    {
-        std::vector<Bricks*>newbricks=factory->getBricks(3);//makes that amount of bricks
-        for (Bricks*bricks:newbricks)
-        {
-            m_bricks.push_back(bricks);
-        }
-    }
+    //for(BricksFactory*factory:factories)
+    //{
+    //    std::vector<Bricks*>newbricks=factory->getBricks(3);//makes that amount of bricks
+     //   for (Bricks*bricks:newbricks)
+     //   {
+     //       m_bricks.push_back(bricks);
+      //  }
+   // }
 }
     
 Game::~Game()
